@@ -1,4 +1,4 @@
-from main import server
+from ..main import server
 
 def test_devops_request():
     name = "Juan Perez"
