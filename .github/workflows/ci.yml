@@ -16,4 +16,4 @@ jobs:
       - name: Install Python Dependencies
         run: pip install pytest
       - name: Run Python Unit Tests
-        run: ls -la pytest tests/
+        run: ls -la && pytest tests/
