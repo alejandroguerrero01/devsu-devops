@@ -7,13 +7,10 @@ on:
 jobs:
   Pytest:
     runs-on: ubuntu-latest
-    container:
-      image: python:3.10.6-alpine
-      volumes:
-        - ${{ github.workspace }}:/app
+    container: python:3.10.6-alpine
     steps:
       - uses: actions/checkout@v3
       - name: Install Python Dependencies
         run: pip install pytest
       - name: Run Python Unit Tests
-        run: python -m pytest tests/
+        run: python3 -m pytest tests/
