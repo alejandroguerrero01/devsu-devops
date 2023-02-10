@@ -1,0 +1,17 @@
+name: Custom Testing
+on:
+  push:
+    branches:
+      - '**'
+      - '!master'
+jobs:
+  Pytest:
+    runs-on: ubuntu-latest
+    container:
+      image: python:3.10.6-alpine
+    steps:
+      - name: Install Python Dependencies
+        run: pip install pytest
+      - name: Run Python Unit Tests
+        run: pytest tests/
+        
